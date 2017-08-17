@@ -15,11 +15,11 @@
 
 <script>
     //微信分享
-    var weixinUrl= "https://rest.cnaisin.com:8443/AXGY_OP/weixin";
+    var weixinUrl= "https://rest.cnaisin.com:8443/AXGY_OP/weixin";//换成你自己的接口
     //微信分享名片
     $.ajax({
         url:weixinUrl,
-        data:{"appId":"wx5c2a0cf831ae3610","url":window.location.href},
+        data:{"appId":"换成你自己的appid","url":window.location.href},
         type:"post",
         success: function (result) {
             wx.config({
@@ -41,7 +41,7 @@
                     "imgUrl":"http://oodpya7z3.bkt.clouddn.com/CTS_1502957143761_file.jpg",//分享图，默认当相对路径处理，所以使用绝对路径的的话，“http://”协议前缀必须在。
                     "desc" : "这是微信分享自定义名片，想怎么写就怎么写",//摘要,如果分享到朋友圈的话，不显示摘要。
                     "title" : document.title,//分享卡片标题
-//                   "link": window.location.href,//分享出去后的链接，这里可以将链接设置为另一个页面。
+                    //"link": window.location.href,//分享出去后的链接，这里可以将链接设置为另一个页面。
                     "success":function(){//分享成功后的回调函数
                     },
                     'cancel': function () {
